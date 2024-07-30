@@ -1,6 +1,8 @@
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -10,7 +12,8 @@ import java.util.TreeSet;
 public class PatikaStore {
 
     public static TreeSet<Brand> brandList ;
-
+    public static TreeSet<Product> productList;
+    
     static{
         brandList= new TreeSet<>(new ComparatorBrand()) ;
         brandList.add(new Brand("Samsung"));
@@ -23,7 +26,29 @@ public class PatikaStore {
         brandList.add(new Brand("Xiaomi"));
         brandList.add(new Brand("Monster"));
 
+        productList = new TreeSet<>(new ComparatorProduct());
+        productList.add(new Notebook(11,1.2,33,"MACPRO",brandList.getFirst(),6, 14,1024));
+
     }
+
+    //methods
+    
+    //add
+    public static void removeProduct(TreeSet<Product> set, int id ) throws Exception{
+        Iterator<Product> iter = set.iterator();
+        while(iter.hasNext()){
+            Product remove = iter.next();
+            if(id == remove.getID()){
+                set.remove(remove);
+                return;
+            }
+        }
+
+        throw new Exception("Product with id " + id + " you entered could not found! ");
+    }
+
+    
+
 
     public static void main(String[] args) {
         System.out.println(brandList.toString());
@@ -59,6 +84,15 @@ public class PatikaStore {
 
      
        
+       System.out.println(productList.toString());
+
+       try {
+        PatikaStore.removeProduct(productList, 1001);
+    } catch (Exception e) {
+        
+        e.printStackTrace();
+    }
        System.out.println(brandList.toString());
     }
+
 }

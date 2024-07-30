@@ -3,8 +3,8 @@ public class CellPhone  extends Product{
     private int batteryPower;
     final Color color;
 
-    CellPhone(int id, int unitPrice, double discount, int quantity, String name, Brand brand, int ram, double size, int storage, Color color, int power ) {
-        super(id, unitPrice, discount, quantity, name, brand, ram, size, storage);
+    CellPhone(int unitPrice, double discount, int quantity, String name, Brand brand, int ram, double size, int storage, Color color, int power ) {
+        super( unitPrice, discount, quantity, name, brand, ram, size, storage);
         this.color = color;
         this.batteryPower = power;
     }

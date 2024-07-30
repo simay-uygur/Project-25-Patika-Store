@@ -2,7 +2,6 @@
 This is the product management system for a virtual store selling electronic goods.
 
 
-
 The task is: 
 
 ```
@@ -52,7 +51,7 @@ Products should be displayed in a tabular format on the console screen (System.o
 
 Users should be able to add products and select the product group (Mobile Phone, Notebook, etc.).
 
-Users should be able to delete products based on their unique numbers.
+Users should be able to delete products based on their unique numbers. //done
 
 Users should be able to filter and list products based on their unique numbers and brands.
 

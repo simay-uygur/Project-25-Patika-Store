@@ -9,11 +9,13 @@ public class Product {
     private int ram;
     private double screenSize;
     private int storage;
+    private static int productNum = 1000;
 
     Product(){}
 
-    Product(int id, int unitPrice, double discount, int quantity, String name ,Brand brand , int ram, double size, int storage){
-        this.id = id;
+    Product( int unitPrice, double discount, int quantity, String name ,Brand brand , int ram, double size, int storage){
+        productNum++;
+        this.id = productNum;
         this.unitPrice = unitPrice;
         this.discountRate = discount;
         this.productName = name;
