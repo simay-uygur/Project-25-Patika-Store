@@ -11,11 +11,13 @@ In the store, brands will be created, and products will be associated with these
 
 id: The unique number of the brand registered in the system.
 name: The name of the brand.
+
 Brands should always be listed alphabetically.
 
 Brands should be added statically in the following order from code blocks:
 
 Samsung, Lenovo, Apple, Huawei, Casper, Asus, HP, Xiaomi, Monster
+
 Currently, the store plans to sell 2 types of product groups: Mobile Phones and Notebooks.
 
 Later on, different product groups should be able to be added.

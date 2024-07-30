@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class Brand {
  
     private int id = 0;
@@ -46,4 +48,7 @@ public class Brand {
     public void setBrandName(String brandName) {
         this.brandName = brandName;
     }
+
+    
+   
 }

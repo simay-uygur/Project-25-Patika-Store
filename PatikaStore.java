@@ -1,16 +1,18 @@
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /**
  * PatikaStore
  */
 public class PatikaStore {
 
-    public static ArrayList<Brand> brandList ;
+    public static TreeSet<Brand> brandList ;
 
     static{
-        brandList = new ArrayList<>();
+        brandList= new TreeSet<>(new ComparatorBrand()) ;
         brandList.add(new Brand("Samsung"));
         brandList.add(new Brand("Lenovo"));
         brandList.add(new Brand("Apple"));
@@ -20,6 +22,7 @@ public class PatikaStore {
         brandList.add(new Brand("HP"));
         brandList.add(new Brand("Xiaomi"));
         brandList.add(new Brand("Monster"));
+
     }
 
     public static void main(String[] args) {
@@ -33,13 +36,15 @@ public class PatikaStore {
             switch (choice){
                 case 1: //notebook processes 
 
+                    //add remove
                 break;
                 case 2: //cellphone processes 
+                // add remove
                 break;
 
                 case 3: //list brands
                 break;
-
+                    //list filter 
                 default: //nothing 
                 break;
             }
@@ -52,5 +57,8 @@ public class PatikaStore {
 
        System.out.println("Goodbye! ");
 
+     
+       
+       System.out.println(brandList.toString());
     }
 }
