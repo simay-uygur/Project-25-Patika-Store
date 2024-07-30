@@ -49,7 +49,7 @@ Users should be able to list products in the relevant category (Notebooks, Mobil
 
 Products should be displayed in a tabular format on the console screen (System.out.format() can be used).
 
-Users should be able to add products and select the product group (Mobile Phone, Notebook, etc.).
+Users should be able to add products and select the product group (Mobile Phone, Notebook, etc.). //done 
 
 Users should be able to delete products based on their unique numbers. //done
 
